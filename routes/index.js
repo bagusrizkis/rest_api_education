@@ -1,7 +1,11 @@
 const router = require("express").Router();
-const MovieC = require("../controllers/MovieController");
 
-router.get("/movies", MovieC.GetMovies);
-router.post("/movies", MovieC.CreateMovie);
+const { authentication } = require("../middlewares/auth");
+
+router.use("/users", require("./users"));
+
+// authentication dari user login
+router.use(authentication); // terjadi auth untuk router dibawahnya
+router.use("/movies", require("./movies"));
 
 module.exports = router;

@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.User);
     }
   }
   Movie.init(
@@ -84,6 +85,16 @@ module.exports = (sequelize, DataTypes) => {
           isIn: {
             args: [["Released", "In Production"]],
             msg: "Status must between 'Released' or 'In Production'",
+          },
+        },
+      },
+      UserId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            args: true,
+            msg: "User Id can not be null",
           },
         },
       },

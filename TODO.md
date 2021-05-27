@@ -25,7 +25,7 @@ sequelize db:seed:all
 
 ---
 
-## Lecture
+## Lecture REST API
 
 - [x] Buat dokumentasi
 - [x] Buat entry point app
@@ -37,3 +37,29 @@ sequelize db:seed:all
 
       - GET /.. (mendapatkan semua movie)
       - POST /.. (membuat data movie)
+
+## Practice REST API
+
+- [x] Buat routing dan handlernya
+
+      - [x] DELETE / (menghapus movie by id)
+      - [x] PUT / (mengubah data movie by id)
+      - [x] PATCH / (mengubah status movie by id)
+
+## Lecture Protecting REST API
+
+- [x] Model User
+
+      - validasi
+      - hooks hashing password (bcryptjs)
+      - add UserId in movies
+
+- [x] register ?
+- [x] login ?
+- [x] middleware ?
+- [x] authentication movie
+
+      - install jsonwebtoken
+
+- [x] authorization edit dan delete movie
+- [x] environtment variable

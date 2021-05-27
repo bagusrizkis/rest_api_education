@@ -52,7 +52,7 @@ get all movies in database
 
 ## Create Movies
 
-get all movies in database
+create one movie
 
 - **URL**
 
